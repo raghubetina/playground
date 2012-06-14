@@ -1,4 +1,6 @@
 Playground::Application.routes.draw do
+  get "auth/facebook"
+
   resources :users
 
   # The priority is based upon order of creation:
