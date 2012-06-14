@@ -35,10 +35,3 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
-
-<ul>
-	<% @friends.each do |friend| %>
-		<li><%= image_tag "https://graph.facebook.com/#{friend.facebook_id}/picture" %><%= friend.name %></li>
-	<% end %>
-</ul>
-

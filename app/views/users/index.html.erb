@@ -2,8 +2,7 @@
 
 <table>
   <tr>
-    <th>Facebook access token</th>
-    <th>Facebook</th>
+    <th>Facebook ID</th>
     <th>Email</th>
     <th>Name</th>
     <th>Location</th>
@@ -14,7 +13,6 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.facebook_access_token %></td>
     <td><%= user.facebook_id %></td>
     <td><%= user.email %></td>
     <td><%= user.name %></td>
