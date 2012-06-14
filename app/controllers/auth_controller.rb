@@ -20,7 +20,9 @@ class AuthController < ApplicationController
     
     user.facebook_id = me_response["id"]
     user.name = me_response["name"]
-    user.location = me_response["location"]["name"]
+    if me_response["location"].present?
+      user.location = me_response["location"]["name"]
+    end
     
     user.save
     

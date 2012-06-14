@@ -2,6 +2,8 @@ Playground::Application.routes.draw do
   root to: 'users#index'  
 
   get "auth/facebook"
+  
+  get 'users/get_friends/:id', :controller => 'users', :action => 'get_friends'
 
   resources :users
 

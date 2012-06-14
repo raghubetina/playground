@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to "Authorize Facebook", "https://www.facebook.com/dialog/oauth?client_id=162741227192307&redirect_uri=http://localhost:3000/auth/facebook&state=#{@user.id}" %>
+<%= link_to "Authorize Facebook", "https://www.facebook.com/dialog/oauth?client_id=162741227192307&redirect_uri=http://localhost:3000/auth/facebook&state=#{@user.id}&scope=friends_location" %>
+
+<br/>
+
+<%= link_to "Get Friend List", "/users/get_friends/#{@user.id}" %>
 
 
 <p>
@@ -34,7 +38,7 @@
 
 <ul>
 	<% @friends.each do |friend| %>
-		<li><%= image_tag "https://graph.facebook.com/#{friend["id"]}/picture" %><%= friend["name"] %></li>
+		<li><%= image_tag "https://graph.facebook.com/#{friend.facebook_id}/picture" %><%= friend.name %></li>
 	<% end %>
 </ul>
 
