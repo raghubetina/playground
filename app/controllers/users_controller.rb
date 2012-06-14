@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     
-    @friends = @user.friends
+    @json = @user.friends.to_gmaps4rails
     
     respond_to do |format|
       format.html # show.html.erb

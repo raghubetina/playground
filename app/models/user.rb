@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
        
     friends.each do |friend_hash|
       if friend_hash["current_location"].present?
-        self.friends.create facebook_id: friend_hash["uid"], name: friend_hash["name"], location: friend_hash["current_location"]
+        self.friends.create facebook_id: friend_hash["uid"], name: friend_hash["name"], location: friend_hash["current_location"]["name"]
       end
     end
   end
