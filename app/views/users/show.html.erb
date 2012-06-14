@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to "Authorize Facebook", "https://www.facebook.com/dialog/oauth?client_id=162741227192307&redirect_uri=http://localhost:3000/auth/facebook&state=SOME_ARBITRARY_BUT_UNIQUE_STRING" %>
+<%= link_to "Authorize Facebook", "https://www.facebook.com/dialog/oauth?client_id=162741227192307&redirect_uri=http://localhost:3000/auth/facebook&state=#{@user.id}" %>
 
 
 <p>
